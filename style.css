@@ -16,6 +16,9 @@
     --number-light: hsl(230, 17%, 14%); 
 }
 /* GENERAL */
+html {
+    font-family: 'Inter', sans-serif;
+}
 .container {
     width: 100vw;
     height: 100vh;
@@ -219,7 +222,7 @@ section:first-child ul li img {
     align-items: center;
     justify-content: space-evenly;
     font-size: 4em;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--number-dark);
     transition: 0.5s;
 }
@@ -228,6 +231,7 @@ section:first-child ul li img {
     font-size: 1rem;
     color: var(--writing-dark) !important;
     letter-spacing: 2px;
+    font-weight: 400;
     text-transform: uppercase;
     transition: 0.5s;
 }
@@ -279,14 +283,15 @@ section:last-child ul li {
     justify-content: space-between;
     align-items: center;
     color: var(--writing-dark);
-    margin-bottom: 2%;
+    font-weight: 400;
+    margin-bottom: 5%;
     width: 100%;
     transition: 0.5s;
 }
 .number2 {
     color: var(--number-dark);
     font-size: 2em;
-    font-weight: 500;
+    font-weight: 700;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
