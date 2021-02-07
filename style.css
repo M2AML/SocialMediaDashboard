@@ -308,6 +308,11 @@ section:last-child ul li {
     margin-right: 5px;
 } 
 
+/* FOOTER */ 
+footer {
+    color: var(--writing-dark);
+}
+
 /* RESPONSIVE */
 
 @media screen and (min-width: 501px) and (max-width: 1000px) {
@@ -394,6 +399,6 @@ section:last-child ul li {
     /* FOOTER */
     footer {
         position: absolute;
-        bottom: 1.5%;
+        bottom: 2%;
     }
 }
