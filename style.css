@@ -1,0 +1,394 @@
+/* RESET */
+*, ::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* VARIABLE_NAME */ 
+:root {
+    /* COLORS FOR DARK THEME*/
+    --bgcard-dark: hsl(228, 28%, 20%);
+    --writing-dark: hsl(228, 34%, 66%);
+    --number-dark: hsl(0, 0%, 100%); 
+    /*COLORS FOR LIGHT THEME*/
+    --bgcard-light: hsl(227, 47%, 96%);
+    --writing-light: hsl(228, 12%, 44%);
+    --number-light: hsl(230, 17%, 14%); 
+}
+/* GENERAL */
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: hsl(230, 17%, 14%);
+    transition: 0.5s;
+}
+.bg-top {
+    position: absolute;
+    width: 100%;
+    height: 32%;
+    top: 0;
+    z-index: 1;
+    background-color: hsl(232, 19%, 15%);
+    transition: 0.5s;
+}
+body {
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+}
+li {
+    background-color: var(--bgcard-dark);
+    transition: 0.5s;
+}
+
+li:hover {
+    background-color: hsl(228, 12%, 44%);
+    transition: 0.5s;
+}
+
+/* MAIN */
+main {
+    z-index: 2;
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+}
+ul {
+    list-style: none;
+}
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.title h2 {
+    color: hsl(0, 0%, 100%);
+    transition: 0.5s;
+}
+.title p {
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+/* THEME SWITCHER */
+.theme-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+    transition: 0.5s;
+}
+.theme-switcher .mode-name {
+    transition: 0.5s;
+}
+.btn-toggle {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 60px;
+    margin-left: 8px;
+    padding: 3px;
+    border-radius: 30px;
+    background-image:  linear-gradient( to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    cursor: pointer;
+    transition: 0.5s;
+} 
+.active {
+    transition: 0.5s;
+}
+.active > .circle {
+    margin-left: 30px;
+    transition: 0.5s;
+    background-color: hsl(0, 0%, 100%);
+}
+.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: hsl(228, 28%, 20%);
+    transition: 0.5s;
+}
+/* LIGHT THEME PROPERTY */
+.light {
+    background-color: var(--bgcard-light);
+    transition: 0.5s;
+}
+.light:hover {
+    background-color: hsl(230, 22%, 74%)!important ;
+}
+.social-network-color, .follow-light , .counter-light{
+    color: var(--writing-light)!important;
+    transition: 0.5s;
+}
+.container-light {
+    background-color: hsl(0,0%,100%);
+    transition: 0.5s;
+}
+.bg-top-light {
+    background-color: hsl(225, 100%, 98%);
+    transition: 0.5s;
+}
+.h2-light {
+    color: var(--number-light)!important;
+    transition: 0.5s;
+}
+.p-light {
+    color: var(--writing-light)!important;
+    transition: 0.5s;
+}
+.light-number {
+    color: var(--number-light) !important;
+    transition: 0.5s;
+}
+.light-number2 {
+    color: var(--number-light) !important;
+    transition: 0.5s;
+}
+/* FIRST SECTION */
+
+section:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+}
+section:first-child ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 2%;
+}
+section:first-child ul li {
+    display: flex;
+    padding: 10%;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+.card-facebook {
+    border-top: 5px solid  hsl(208, 92%, 53%);
+}
+.card-twitter {
+    border-top: 5px solid hsl(203, 89%, 53%);
+}
+.card-instagram {
+    position: relative;
+}
+.card-instagram .gradient {
+    position: absolute;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+    background-image: linear-gradient(to left, hsl(329, 70%, 58%), hsl(37, 97%, 70%));
+    width: 100%;
+    height: 5px;
+}
+.card-youtube {
+    border-top: 5px solid hsl(348, 97%, 39%);
+}
+.facebook, .twitter, .instagram, .youtube {
+    display: flex;
+    margin-bottom: 2%;
+    font-weight: 700;
+    font-size: 0.8em;
+    color: var(--writing-dark);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+section:first-child ul li img {
+    margin-right: 3%;
+}
+.number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 4em;
+    font-weight: 500;
+    color: var(--number-dark);
+    transition: 0.5s;
+}
+
+.number span {
+    font-size: 1rem;
+    color: var(--writing-dark) !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.day {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 0.7rem;
+    color: hsl(163, 72%, 41%);
+    margin-top: 8%;
+    transition: 0.5s;
+}
+.red {
+    color: hsl(356, 69%, 56%)!important;
+    transition: 0.5s;
+}
+
+/* SECOND SECTION */
+
+section:last-child {
+    display: flex;
+    flex-direction: column;
+}
+section:last-child h2 {
+    color: hsl(0, 0%, 100%);
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+section:last-child ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 2%;
+    row-gap: 8%;
+}
+section:last-child ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--writing-dark);
+    margin-bottom: 2%;
+    width: 100%;
+    transition: 0.5s;
+}
+.number2 {
+    color: var(--number-dark);
+    font-size: 2em;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.number2 span {
+    font-size: 0.7rem;
+    color: hsl(163, 72%, 41%);
+    transition: 0.5s;
+}
+.number2 img {
+    margin-right: 5px;
+} 
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+    li > * {
+        transform: scale(0.85);
+    }
+    li {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 0 ) and (max-width: 500px) {
+    body {
+        overflow-y: scroll;
+    }
+    .container {
+        height: 2387px;
+    }
+    /* MAIN */
+    main {
+        position: absolute;
+        top: 3%;
+        width: 90vw;
+        height: 95vh;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    /* HEADER */
+    header {
+        margin-bottom: 15%;
+    }
+    header .title {
+        width: 100%;
+    }
+    /* THEME SWITCHER */
+    .theme-switcher {
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 5%;
+        margin-top: 8%;
+        border-top: 1px solid #000;
+    }
+    /* FIRST SECTION */
+    section:first-child {
+        margin-bottom: 25%
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 0;
+    }
+    section:first-child ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        column-gap: 0;
+        row-gap: 2%;
+        margin-bottom: 2%;
+    }
+    section:first-child ul li {
+        padding: 6.5%;
+    }
+    /* SECOND SECTION*/
+    section:last-child {
+        display: flex;
+        flex-direction: column;
+    }
+    section:last-child h2 {
+        color: hsl(0, 0%, 100%);
+        margin-bottom: 5%;
+    }
+    section:last-child ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8,1fr);
+        column-gap: 0;
+        row-gap: 2%;
+    }
+    section:last-child ul li {
+        padding: 8%;
+    }
+    /* FOOTER */
+    footer {
+        position: absolute;
+        bottom: 1.5%;
+    }
+}
